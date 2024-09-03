@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>ILS Group15</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="public/img/favicon.ico">
+
+
+    <!-- DEMO CHARTS -->
+    <link rel="stylesheet" href="public/demo/chartist.css">
+    <link rel="stylesheet" href="public/demo/chartist-plugin-tooltip.css">
+
+    <!-- Template -->
+    <link rel="stylesheet" href="public/graindashboard/css/graindashboard.css">
+
+     <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+<!-- Header -->
+<header class="header bg-body">
+    <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+            <!-- Logo For Mobile View -->
+            <a class="navbar-brand navbar-brand-mobile" href="/">
+                <img class="img-fluid w-100" src="public/img/BIGMART.png" alt="BigMart">
+            </a>
+            <!-- End Logo For Mobile View -->
+
+            <!-- Logo For Desktop View -->
+            <a class="navbar-brand navbar-brand-desktop" href="/">
+                <img class="side-nav-show-on-closed" src="public/img/BIGMART.png" alt="BigMart" style="width: auto; height: 33px;">
+                <img class="side-nav-hide-on-closed" src="public/img/BIGMART.png" alt="BigMart" style="width: auto; height: 33px;">
+            </a>
+            <!-- End Logo For Desktop View -->
+        </div>
+
+        <div class="header-content col px-md-3">
+            <div class="d-flex align-items-center">
+                <!-- Side Nav Toggle -->
+                <a  class="js-side-nav header-invoker d-flex mr-md-2" href="#"
+                    data-close-invoker="#sidebarClose"
+                    data-target="#sidebar"
+                    data-target-wrapper="body">
+                    <i class="gd-align-left"></i>
+                </a>
+                <!-- End Side Nav Toggle -->
+
+                <!-- User Notifications -->
+                <div class="dropdown ml-auto">
+                    <a id="notificationsInvoker" class="header-invoker" href="#" aria-controls="notifications" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#notifications" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                        <span class="indicator indicator-bordered indicator-top-right indicator-primary rounded-circle"></span>
+                        <i class="gd-bell"></i>
+                    </a>
+
+                    <div id="notifications" class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem unfold-css-animation unfold-hidden" aria-labelledby="notificationsInvoker" style="animation-duration: 300ms;">
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center border-bottom py-3">
+                                <h5 class="mb-0">Notifications</h5>
+                                <a class="link small ml-auto" href="#">Clear All</a>
+                            </div>
+
+                            <div class="card-body p-0">
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center text-nowrap mb-2">
+                                            <i class="gd-info-alt icon-text text-primary mr-2"></i>
+                                            <h6 class="font-weight-semi-bold mb-0">New Update</h6>
+                                            <span class="list-group-item-date text-muted ml-auto">just now</span>
+                                        </div>
+                                        <p class="mb-0">
+                                            Order <strong>#10000</strong> has been updated.
+                                        </p>
+                                        <a class="list-group-item-closer text-muted" href="#"><i class="gd-close"></i></a>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center text-nowrap mb-2">
+                                            <i class="gd-info-alt icon-text text-primary mr-2"></i>
+                                            <h6 class="font-weight-semi-bold mb-0">New Update</h6>
+                                            <span class="list-group-item-date text-muted ml-auto">just now</span>
+                                        </div>
+                                        <p class="mb-0">
+                                            Order <strong>#10001</strong> has been updated.
+                                        </p>
+                                        <a class="list-group-item-closer text-muted" href="#"><i class="gd-close"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End User Notifications -->
+                <!-- User Avatar -->
+                <div class="dropdown mx-3 dropdown ml-2">
+                    <a id="profileMenuInvoker" class="header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#profileMenu" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                        <!--img class="avatar rounded-circle mr-md-2" src="#" alt="John Doe"-->
+                        <span class="mr-md-2 avatar-placeholder">T</span>
+                        <span class="d-none d-md-block">Trister</span>
+                        <i class="gd-angle-down d-none d-md-block ml-2"></i>
+                    </a>
+
+                    <ul id="profileMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="profileMenuInvoker" style="animation-duration: 300ms;">
+                        <li class="unfold-item">
+                            <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                    <span class="unfold-item-icon mr-3">
+                      <i class="gd-user"></i>
+                    </span>
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="unfold-item unfold-item-has-divider">
+                            <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                    <span class="unfold-item-icon mr-3">
+                      <i class="gd-power-off"></i>
+                    </span>
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End User Avatar -->
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
+
+<main class="main">
+    <!-- Sidebar Nav -->
+    <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+            <!-- Title -->
+            <li class="sidebar-heading h6">Dashboard</li>
+            <!-- End Title -->
+
+            <!-- Dashboard -->
+            <li class="side-nav-menu-item active">
+                <a class="side-nav-menu-link media align-items-center" href="index.html">
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="gd-dashboard"></i>
+              </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard -->
+
+            <li class="side-nav-menu-item active">
+                <a class="side-nav-menu-link media align-items-center" href="index2.html">
+                    <span class="side-nav-menu-icon d-flex mr-3">
+                        <i class="gd-stats-up"></i> <!-- Updated icon for Store Performance -->
+                    </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Store Performance</span> <!-- Updated text for Store Performance -->
+                </a>
+            </li>
+
+            <li class="side-nav-menu-item active">
+                <a class="side-nav-menu-link media align-items-center" href="index3.html">
+                    <span class="side-nav-menu-icon d-flex mr-3">
+                        <i class="gd-user"></i> <!-- Updated icon for customers -->
+                    </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Customers</span> <!-- Updated text for customers -->
+                </a>
+            </li>
+
+            <li class="side-nav-menu-item active">
+                <a class="side-nav-menu-link media align-items-center" href="index4.html">
+                    <span class="side-nav-menu-icon d-flex mr-3">
+                        <i class="gd-archive"></i> <!-- Updated icon for Management -->
+                    </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Management</span> <!-- Updated text for Management-->
+                </a>
+            </li>
+
+            <li class="side-nav-menu-item active">
+                <a class="side-nav-menu-link media align-items-center" href="index5.html">
+                    <span class="side-nav-menu-icon d-flex mr-3">
+                        <i class="gd-reload"></i> <!-- Updated icon for Supply Chain -->
+                    </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Supply Chain</span> <!-- Updated text for Supply Chain-->
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+    <!-- End Sidebar Nav -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+<H2>Customer satifaction</H2>
+<!-- Pie Chart for Customer Satisfaction -->
+<div class="col-lg-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Customer Satisfaction</h5>
+
+      <!-- Pie Chart -->
+      <canvas id="pieChart" style="max-height: 400px;"></canvas>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const pieChart = new Chart(document.querySelector('#pieChart'), {
+            type: 'pie',
+            data: {
+              labels: ['Positive', 'Neutral', 'Negative'],
+              datasets: [{
+                label: 'Customer Satisfaction',
+                data: [55, 30, 15],
+                backgroundColor: ['#98e5b2', '#e0f8e9', '#7288e8'],
+                hoverOffset: 8
+              }]
+            },
+            options: {
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      var label = context.label || '';
+                      var value = context.raw || '';
+                      return label + ': ' + value + '%';
+                    }
+                  }
+                }
+              }
+            }
+          });
+
+          const wordCloudImage = document.getElementById("wordCloudImage");
+
+          // Add a click event listener to the pie chart
+          pieChart.options.onClick = (event, chartElements) => {
+            if (chartElements.length > 0) {
+              // Determine which section was clicked
+              const clickedSection = chartElements[0];
+              // Determine the index of the clicked section
+              const index = clickedSection.index;
+
+              // Update the image source based on the clicked section
+              if (index === 0) {
+                wordCloudImage.src = 'assets/img/Posc (1).png';
+              } else if (index === 1) {
+                wordCloudImage.src = 'assets/img/Nut.png';
+              } else if (index === 2) {
+                wordCloudImage.src = 'assets/img/neg.png';
+                
+              }
+            }
+          };
+        });
+      </script>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-lg-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Overall customer staisfaction</h5>
+
+    <!-- Bar Chart -->
+    <canvas id="barChart1" style="max-height: 400px;"></canvas>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new Chart(document.querySelector('#barChart1'), {
+          type: 'bar', // Use 'bar' chart type
+          data: {
+            labels: [
+              '2020',
+              '2021',
+              '2022',
+              '2023',
+              '2024',
+            ],
+            datasets: [{
+              label: 'Overall Customer Satisfaction',
+              data: [50, 60, 70, 80, 79],
+              backgroundColor: [
+                '#c0cffc',
+                '#ffe05f',
+                '#98e5b2',
+                '#fff8d4',
+                '#e0f8e9',
+              ],
+            }]
+          },
+          options: {
+            scales: {
+              x: {
+                beginAtZero: true,
+              },
+              y: {
+                beginAtZero: true,
+                suggestedMax: 100, // Customize the scale as needed
+              },
+            },
+            plugins: {
+              legend: {
+                display: false, // Hide the legend
+              },
+              title: {
+                display: true,
+                text: 'Overall Customer Satisfaction', // Chart title
+                fontSize: 16,
+              },
+              responsive: true,
+              aspectRatio: 1.5, // Adjust the aspect ratio as needed
+            },
+          },
+        });
+      });
+    </script>
+    <!-- End Bar Chart -->
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card"> 
+      <div>
+
+        <div class="card flex-row align-items-left p-3 p-md-4">
+            <div>
+                <h5 class="lh-1 mb-0">Customers</h5>
+                <small>320 (+20)</small>
+            </div>
+            <div class="js-area-chart chart--points-invisible chart--labels-hidden py-2 ml-auto"
+                 data-series='[
+               [
+                 {"value":"35"},
+                 {"value":"20"},
+                 {"value":"10"},
+                 {"value":"20"},
+                 {"value":"20"},
+                 {"value":"0"},
+                 {"value":"10"},
+                 {"value":"0"},
+                 {"value":"10"},
+                 {"value":"10"},
+                 {"value":"15"},
+                 {"value":"35"},
+                 {"value":"15"},
+                 {"value":"20"},
+                 {"value":"35"},
+                 {"value":"35"},
+                 {"value":"40"},
+                 {"value":"42"}
+               ]
+             ]'
+                 data-is-hide-area="true"
+                 data-width="123"
+                 data-height="42"
+                 data-high="42"
+                 data-is-line-smooth='[false]'
+                 data-line-width='["2px"]'
+                 data-line-colors='["#8069f2"]'
+                 data-is-show-tooltips="true"
+                 data-is-tooltips-append-to-body="true"
+                 data-tooltip-custom-class="chart-tooltip chart-tooltip--none-triangle d-flex align-items-center small text-white p-2 mt-5 ml-5"
+                 data-tooltip-badge-markup='<span class="indicator indicator-sm bg-primary rounded-circle mr-1"></span>'
+                 data-is-show-points="true"
+                 data-point-custom-class='chart__point--hidden'
+                 data-point-dimensions='{"width":8,"height":8}'></div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+          </div>
+        </div><!-- End Left side columns -->
+        </div><!-- End Right side columns -->
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3 mb-md-4">
+                <div class="card-header">
+                    <h5 class="font-weight-semi-bold mb-0">Recent Orders</h5>
+                </div>
+
+                <div class="card-body pt-0">
+                    <div class="table-responsive-xl">
+                        <table class="table text-nowrap mb-0">
+                            <thead>
+                            <tr>
+                                <th class="font-weight-semi-bold border-top-0 py-2">#</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Customer</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Phone</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Amount</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Status</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-warning">Pending</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown16Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown16" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown16" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown16" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown16Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-success">Fulfilled</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown15Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown15" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown15" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown15" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown15Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-warning">Pending</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown14Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown14" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown14" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown14" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown14Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-danger">Cancelled</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown13Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown13" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown13" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown13" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown13Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-success">Fulfilled</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown12Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown12" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown12" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown12" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown12Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-light">Draft</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown11Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown11" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown11" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown11" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown11Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">149531</td>
+                                <td class="py-3">
+                                    <div>John Doe</div>
+                                    <div class="text-muted">Acme Inc.</div>
+                                </td>
+                                <td class="py-3">(000) 111-1234</td>
+                                <td class="py-3">$1,230.00</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-success">Fulfilled</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a id="dropDown10Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown10" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown10" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+                                            <i class="gd-more-alt icon-text"></i>
+                                        </a>
+
+                                        <ul id="dropDown10" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown10Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-pencil unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Edit</span>
+                                                </a>
+                                            </li>
+                                            <li class="unfold-item">
+                                                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                                                    <i class="gd-close unfold-item-icon mr-3"></i>
+                                                    <span class="media-body">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      </div>
+    </section>
+
+</main>
+
+
+<script src="public/graindashboard/js/graindashboard.js"></script>
+<script src="public/graindashboard/js/graindashboard.vendor.js"></script>
+
+<!-- DEMO CHARTS -->
+<script src="public/demo/resizeSensor.js"></script>
+<script src="public/demo/chartist.js"></script>
+<script src="public/demo/chartist-plugin-tooltip.js"></script>
+<script src="public/demo/gd.chartist-area.js"></script>
+<script src="public/demo/gd.chartist-bar.js"></script>
+<script src="public/demo/gd.chartist-donut.js"></script>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.min.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script>
+    $.GDCore.components.GDChartistArea.init('.js-area-chart');
+    $.GDCore.components.GDChartistBar.init('.js-bar-chart');
+    $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
+</script>
+</body>
+</html>
